@@ -1,1 +1,1 @@
-# sugarman-yampa
+# sugarman
