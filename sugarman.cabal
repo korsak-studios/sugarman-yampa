@@ -1,7 +1,11 @@
+-- This file has been generated from package.yaml by hpack version 0.27.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 99990fa3b23500af78150def9c89790678ccf80915b5cfc7cb5e1f2831a8cd48
+
 name:                sugarman
 version:             0.1.0.0
--- synopsis:
--- description:
 homepage:            https://github.com/sigrlami/sugarman#readme
 license:             BSD3
 license-file:        LICENSE
@@ -10,11 +14,22 @@ maintainer:          sergey.bushnyak@sigrlami.eu
 copyright:           Copyright: (c) 2017 Sergey Bushnyak
 category:            Web
 build-type:          Simple
-cabal-version:       >=1.10
-extra-source-files:  README.md
+cabal-version:       >= 1.10
+
+extra-source-files:
+    README.md
 
 executable sugarman
-  hs-source-dirs:      src
-  main-is:             Main.hs
-  default-language:    Haskell2010
-  build-depends:       base >= 4.7 && < 5
+  hs-source-dirs:
+      src
+  main-is: Main.hs
+  other-modules:
+      Types
+      Types.Hero
+      Types.Obstacle
+      Paths_sugarman
+  default-language: Haskell2010
+  build-depends:
+      Yampa
+    , base >=4.7 && <5
+    , yampa-gloss
